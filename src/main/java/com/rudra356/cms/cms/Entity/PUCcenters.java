@@ -49,13 +49,13 @@ public class PUCcenters {
 
     @NonNull
     @NotBlank(message = "City is mandatory")
-    @Size(min = 2, max = 50, message = "City name must be between 2 and 50 characters")
+    @Size(min = 2, max = 20, message = "City name must be between 2 and 50 characters")
     @Pattern(regexp = "^[a-zA-Z ]+$", message = "City can contain only letters and spaces")
     private String city;
 
     @NonNull
     @NotBlank(message = "State is mandatory")
-    @Size(min = 2, max = 50, message = "State name must be between 2 and 50 characters")
+    @Size(min = 2, max = 20, message = "State name must be between 2 and 50 characters")
     @Pattern(regexp = "^[a-zA-Z ]+$", message = "State can contain only letters and spaces")
     private String state;
 

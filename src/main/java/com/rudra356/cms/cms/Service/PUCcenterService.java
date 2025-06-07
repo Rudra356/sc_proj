@@ -39,7 +39,7 @@ public class PUCcenterService {
 
     public Optional<PUCcenters> deleteCenterByCenterName(String centerName) {
         Optional<PUCcenters> center = pr.findByCenterName(centerName);
-        center.ifPresent(c->pr.deleteCenterByCenterName(centerName));
+        center.ifPresent(c -> pr.deleteCenterByCenterName(centerName));
         return center;
     }
 }

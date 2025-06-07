@@ -55,7 +55,7 @@ public class PUCcenterController {
     @DeleteMapping("/id/{id}")
     public ResponseEntity<?> DeleteCenterById(@PathVariable String id) {
         Optional<PUCcenters> dlt = ps.deleteCenterById(id); // ✅ fixed line
-        return dlt.isPresent() ? new ResponseEntity<>(dlt.get(),HttpStatus.GONE) :
+        return dlt.isPresent() ? new ResponseEntity<>(dlt.get(), HttpStatus.GONE) :
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
@@ -72,7 +72,7 @@ public class PUCcenterController {
     @DeleteMapping("/name/{centerName}")
     public ResponseEntity<?> DeleteCenterByCenterName(@PathVariable String centerName) {
         Optional<PUCcenters> dlt = ps.deleteCenterByCenterName(centerName);
-        return dlt.isPresent() ? new ResponseEntity<>(dlt.get(),HttpStatus.GONE) :
+        return dlt.isPresent() ? new ResponseEntity<>(dlt.get(), HttpStatus.GONE) :
                 new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
